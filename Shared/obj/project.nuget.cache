@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "0IugQY2nMQVyzSmLshSsw8I4Y6phvTfMTk6ECIWtaAi2M5jCe71lbQzNmFk48UY+CTIpqyKWPHm9DS5H/Ie+lA==",
+  "success": true,
+  "projectFilePath": "D:\\RDRNetwork_Work\\RDRNetwork\\Shared\\Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Flash\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

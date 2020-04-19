@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{011F8254-E018-4E3A-8050-AB3282517EDD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RDRNetwork</RootNamespace>
+    <AssemblyName>RDRNetwork</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <LangVersion>preview</LangVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>C:\RDRNetwork\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClearScript, Version=6.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ClearScript.6.0.1\lib\net45\ClearScript.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyHook, Version=2.7.7097.0, Culture=neutral, PublicKeyToken=4b580fca19d0b0c5, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyHook.2.7.7097\lib\net40\EasyHook.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.10.0\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.D3DCompiler, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.D3DCompiler.4.2.0\lib\net45\SharpDX.D3DCompiler.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Desktop, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Desktop.4.2.0\lib\net45\SharpDX.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct2D1, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct2D1.4.2.0\lib\net45\SharpDX.Direct2D1.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct3D11.4.2.0\lib\net45\SharpDX.Direct3D11.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11.Effects, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct3D11.Effects.4.2.0\lib\net45\SharpDX.Direct3D11.Effects.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D12, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct3D12.4.2.0\lib\net45\SharpDX.Direct3D12.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DXGI, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.DXGI.4.2.0\lib\net45\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Mathematics, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Mathematics.4.2.0\lib\net45\SharpDX.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\Audio.cs" />
+    <Compile Include="API\AudioFlag.cs" />
+    <Compile Include="API\Blip.cs" />
+    <Compile Include="API\BlipModifier.cs" />
+    <Compile Include="API\BlipSprite.cs" />
+    <Compile Include="API\BlipType.cs" />
+    <Compile Include="API\Camera.cs" />
+    <Compile Include="API\CameraShake.cs" />
+    <Compile Include="API\Control.cs" />
+    <Compile Include="API\Entities\Entity.cs" />
+    <Compile Include="API\Entities\EntityType.cs" />
+    <Compile Include="API\Entities\Model.cs" />
+    <Compile Include="API\Entities\Peds\AnimationFlags.cs" />
+    <Compile Include="API\Entities\Peds\Bone.cs" />
+    <Compile Include="API\Entities\Peds\FiringPattern.cs" />
+    <Compile Include="API\Entities\Peds\FormationType.cs" />
+    <Compile Include="API\Entities\Peds\Gender.cs" />
+    <Compile Include="API\Entities\Peds\Ped.cs" />
+    <Compile Include="API\Entities\Peds\PedGroup.cs" />
+    <Compile Include="API\Entities\Peds\PedHash.cs" />
+    <Compile Include="API\Entities\Peds\Relationship.cs" />
+    <Compile Include="API\Entities\Peds\RelationshipGroup.cs" />
+    <Compile Include="API\Entities\Peds\Tasks.cs" />
+    <Compile Include="API\Entities\Peds\TaskSequence.cs" />
+    <Compile Include="API\Entities\Peds\VehicleFlags.cs" />
+    <Compile Include="API\Entities\Prop.cs" />
+    <Compile Include="API\Entities\Vehicles\Vehicle.cs" />
+    <Compile Include="API\Entities\Vehicles\VehicleHash.cs" />
+    <Compile Include="API\Entities\Vehicles\VehicleLockStatus.cs" />
+    <Compile Include="API\Entities\Vehicles\VehicleSeat.cs" />
+    <Compile Include="API\Entities\Vehicles\VehicleWindowTint.cs" />
+    <Compile Include="API\Game.cs" />
+    <Compile Include="API\GameplayCamera.cs" />
+    <Compile Include="API\GameVersion.cs" />
+    <Compile Include="API\Handleable.cs" />
+    <Compile Include="API\InputMode.cs" />
+    <Compile Include="API\IntersectOptions.cs" />
+    <Compile Include="API\Language.cs" />
+    <Compile Include="API\MarkerType.cs" />
+    <Compile Include="API\Math\Matrix.cs" />
+    <Compile Include="API\Math\Quaternion.cs" />
+    <Compile Include="API\Math\Vector2.cs" />
+    <Compile Include="API\Math\Vector3.cs" />
+    <Compile Include="API\Pickup.cs" />
+    <Compile Include="API\PickupType.cs" />
+    <Compile Include="API\Player.cs" />
+    <Compile Include="API\PoolObject.cs" />
+    <Compile Include="API\Prompt.cs" />
+    <Compile Include="API\RaycastResult.cs" />
+    <Compile Include="API\RequireScript.cs" />
+    <Compile Include="API\Rope.cs" />
+    <Compile Include="API\RopeType.cs" />
+    <Compile Include="API\Scaleform.cs" />
+    <Compile Include="API\ScaleformArgumentTXD.cs" />
+    <Compile Include="API\SelectedIndexChangedArgs.cs" />
+    <Compile Include="API\Weapons\AmmoType.cs" />
+    <Compile Include="API\Weapons\Weapon.cs" />
+    <Compile Include="API\Weapons\WeaponAsset.cs" />
+    <Compile Include="API\Weapons\WeaponCollection.cs" />
+    <Compile Include="API\Weapons\WeaponComponent.cs" />
+    <Compile Include="API\Weapons\WeaponGroup.cs" />
+    <Compile Include="API\Weapons\WeaponHash.cs" />
+    <Compile Include="API\WeatherType.cs" />
+    <Compile Include="API\World.cs" />
+    <Compile Include="Cleanup.cs" />
+    <Compile Include="Entities\Client.cs" />
+    <Compile Include="Gui\Cef\Browser.cs" />
+    <Compile Include="Gui\Cef\BrowserJavascriptCallback.cs" />
+    <Compile Include="Gui\Cef\CefController.cs" />
+    <Compile Include="Gui\Cef\CefManager.cs" />
+    <Compile Include="Gui\Cef\CefUtil.cs" />
+    <Compile Include="Gui\Cef\ContextMenuRemover.cs" />
+    <Compile Include="Gui\Cef\MainCefApp.cs" />
+    <Compile Include="Gui\Cef\MainCefClient.cs" />
+    <Compile Include="Gui\Cef\MainCefLoadHandler.cs" />
+    <Compile Include="Gui\Cef\MainCefRenderHandler.cs" />
+    <Compile Include="Gui\Cef\MainLifeSpanHandler.cs" />
+    <Compile Include="Gui\Cef\MimeType.cs" />
+    <Compile Include="Gui\Cef\SecureCefResourceHandler.cs" />
+    <Compile Include="Gui\Cef\SecureSchemeFactory.cs" />
+    <Compile Include="Gui\Cef\V8Array.cs" />
+    <Compile Include="Gui\Cef\V8Bridge.cs" />
+    <Compile Include="Gui\Cef\V8Helper.cs" />
+    <Compile Include="Gui\Cef\WebKitInjector.cs" />
+    <Compile Include="Gui\ImageElement.cs" />
+    <Compile Include="Gui\DxHook.cs" />
+    <Compile Include="Javascript\ClientsideScriptWrapper.cs" />
+    <Compile Include="Javascript\JavascriptHook.cs" />
+    <Compile Include="Javascript\ScriptContext.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Hook.cs" />
+    <Compile Include="Entities\LocalHandle.cs" />
+    <Compile Include="Utils\Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\cefglue-master\CefGlue\CefGlue.csproj">
+      <Project>{703ff300-34b9-48d4-a5d6-e741f48d5f95}</Project>
+      <Name>CefGlue</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Module\ScriptHookRDRDotNet.vcxproj">
+      <Project>{ee620bcb-3c8c-4be8-88f4-924daaef304b}</Project>
+      <Name>Module</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{B7CE126F-D706-4C6D-92EC-996F6FA2673E}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EasyHook32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EasyHook32Svc.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EasyHook64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EasyHook64Svc.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EasyLoad32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EasyLoad64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>del $(TargetDir)ClearScriptV8-32.dll
+del $(TargetDir)v8-base-ia32.dll
+del $(TargetDir)v8-ia32.dll
+del $(TargetDir)v8-zlib-ia32.dll
+xcopy /E /Y $(TargetDir)*.dll "C:\RDRNetwork\bin\Scripts\"
+</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.ClearScript.6.0.1\build\net45\Microsoft.ClearScript.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ClearScript.6.0.1\build\net45\Microsoft.ClearScript.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.ClearScript.6.0.1\build\net45\Microsoft.ClearScript.targets" Condition="Exists('..\packages\Microsoft.ClearScript.6.0.1\build\net45\Microsoft.ClearScript.targets')" />
+</Project>

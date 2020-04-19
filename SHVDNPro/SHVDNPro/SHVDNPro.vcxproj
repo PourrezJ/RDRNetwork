@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{74B50C66-1EC4-4425-ADD9-4CAE2CAA8638}</ProjectGuid>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>RDR2</RootNamespace>
+    <IncludePath>$(ProjectDir)vendor/inc;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)vendor/lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <!-- Global configuration settings -->
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <!-- Support for VS2013 and VS2015 -->
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <OutDir>$(SolutionDir)x64\Release\</OutDir>
+    <IntDir>$(ProjectDir)x64\Release\</IntDir>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <ExtensionsToDeleteOnClean>*.xdc;$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
+    <XDCMakeToolExe>XDCMake.exe</XDCMakeToolExe>
+    <XDCMakeToolPath>$(SolutionDir)tools\</XDCMakeToolPath>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <!-- Specific configuration settings -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <!-- Global compilation settings -->
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>core;..\SDK\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\SDK\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ScriptHookRDR2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Xdcmake>
+      <AdditionalDocumentFile>$(IntDir)$(TargetName).xdc;%(AdditionalDocumentFile)</AdditionalDocumentFile>
+    </Xdcmake>
+  </ItemDefinitionGroup>
+  <!-- Specific compilation settings -->
+  <ItemDefinitionGroup Condition="'$(Configuration)' == 'Release'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;WIN32_LEAN_AND_MEAN;NOSOUND;NOMINMAX;NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Default</LinkTimeCodeGeneration>
+    </Link>
+    <CsCompile>
+      <Optimize>true</Optimize>
+      <NoWarn>1591;%(NoWarn)</NoWarn>
+    </CsCompile>
+    <PreBuildEvent>
+      <Command>$(SolutionDir)tools\NativeGen.exe  http://github.com/UnknownModder/rdr3-nativedb-data/raw/master/natives.json core\NativeHashes.h</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)SHVDNPro.dll" "C:\RDRNetwork\bin\SHVDNPro.dll"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <!-- Core source files -->
+  <ItemGroup>
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="core\Function.cpp" />
+    <ClCompile Include="core\GlobalVariable.cpp" />
+    <ClCompile Include="core\Input.cpp" />
+    <ClCompile Include="core\InputArgument.cpp" />
+    <ClCompile Include="core\Log.cpp" />
+    <ClCompile Include="core\Main.cpp" />
+    <ClCompile Include="core\Math\Matrix.cpp" />
+    <ClCompile Include="core\Math\Quaternion.cpp" />
+    <ClCompile Include="core\Math\Vector2.cpp" />
+    <ClCompile Include="core\Math\Vector3.cpp" />
+    <ClCompile Include="core\NativeObjects.cpp" />
+    <ClCompile Include="core\OutputArgument.cpp" />
+    <ClCompile Include="core\rdr2_main.cpp" />
+    <ClCompile Include="core\Script.cpp" />
+    <ClInclude Include="core\Config.h" />
+    <ClInclude Include="core\Function.h" />
+    <ClInclude Include="core\GlobalVariable.h" />
+    <ClInclude Include="core\INativeValue.h" />
+    <ClInclude Include="core\Input.h" />
+    <ClInclude Include="core\InputArgument.h" />
+    <ClInclude Include="core\Invoker\hash_to_address_table.hpp" />
+    <ClInclude Include="core\Invoker\invoker.hpp" />
+    <ClInclude Include="core\Invoker\natives.hpp" />
+    <ClInclude Include="core\IScriptTask.h" />
+    <ClInclude Include="core\Log.h" />
+    <ClInclude Include="core\ManagedGlobals.h" />
+    <ClInclude Include="core\Math\Matrix.hpp" />
+    <ClInclude Include="core\Math\Quaternion.hpp" />
+    <ClInclude Include="core\Math\Vector2.hpp" />
+    <ClInclude Include="core\Math\Vector3.hpp" />
+    <ClInclude Include="core\Memory\memory.hpp" />
+    <ClInclude Include="core\NativeHashes.h" />
+    <ClInclude Include="core\NativeObjects.h" />
+    <ClInclude Include="core\OutputArgument.h" />
+    <ClInclude Include="core\rdr2_main.hpp" />
+    <ClInclude Include="core\Script.h" />
+    <ClInclude Include="Interface.hpp" />
+  </ItemGroup>
+  <!-- Additional source files -->
+  <ItemGroup>
+    <ClCompile Include="core\ScriptDomain.cpp" />
+    <ClCompile Include="core\Tasks\NativeTask.cpp" />
+    <ClCompile Include="core\UnmanagedLog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\ScriptDomain.h" />
+    <ClInclude Include="core\Tasks\NativeTask.h" />
+    <ClInclude Include="core\UnmanagedLog.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <!-- Verify SDK files exist before generating anything -->
+  <Target Name="VerifySDKFiles" BeforeTargets="BeforeBuildGenerateSources">
+    <ItemGroup>
+      <!-- Look for the header files and the library -->
+      <SDKFiles Include="..\SDK\inc\*.h" />
+      <SDKLib Include="..\SDK\lib\*.lib" />
+    </ItemGroup>
+    <PropertyGroup>
+      <!-- Make sure all necessary files are present -->
+      <SDKFilesMissing>false</SDKFilesMissing>
+      <SDKFilesMissing Condition="'@(SDKFiles)' == '' or '@(SDKLib)' == ''">true</SDKFilesMissing>
+    </PropertyGroup>
+    <Error Text="ScriptHookV SDK files not found. Please copy the SDK files into the 'sdk' folder and try again." Condition="$(SDKFilesMissing)" />
+  </Target>
+</Project>

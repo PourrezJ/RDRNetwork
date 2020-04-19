@@ -1,0 +1,5 @@
+D:\Repos\ResurrectionMP_V2\ResurrectionMP\Lidgren.Network\bin\Release\Lidgren.Network.dll
+D:\Repos\ResurrectionMP_V2\ResurrectionMP\Lidgren.Network\obj\Release\Lidgren.Network.dll
+D:\Rockstar\Red Dead Redemption 2\scripts\Lidgren.Network.dll
+D:\Repos\ResurrectionMP_V2\ResurrectionMP\Lidgren.Network\obj\Release\Lidgren.Network.csprojAssemblyReference.cache
+D:\Repos\RDRNetwork\Lidgren.Network\obj\Release\Lidgren.Network.dll

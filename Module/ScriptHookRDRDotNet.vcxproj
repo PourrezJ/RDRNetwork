@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="NativeGen|x64">
+      <Configuration>NativeGen</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EE620BCB-3C8C-4BE8-88F4-924DAAEF304B}</ProjectGuid>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>RDR2DN</RootNamespace>
+    <ProjectName>Module</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <!-- Global configuration settings -->
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <!-- Support for VS2017 and VS2019 -->
+    <PlatformToolset Condition="'$(VisualStudioVersion)'=='15.0'">v141</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)'=='16.0'">v142</PlatformToolset>
+    <OutDir>C:\RDRNetwork\bin\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <ExtensionsToDeleteOnClean>$(ExtensionsToDeleteOnClean);</ExtensionsToDeleteOnClean>
+  </PropertyGroup>
+  <!-- Specific configuration settings -->
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)'=='Debug'">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)'=='Release'">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <LinkIncremental>false</LinkIncremental>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)'=='NativeGen'">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <!-- Global compilation settings -->
+  <PropertyGroup>
+    <TargetExt>.dll</TargetExt>
+    <TargetName>RDRN_Module</TargetName>
+    <IncludePath>$(ProjectDir)vendor/inc;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)vendor/lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalUsingDirectories>$(IntDir);%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>sdk\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="">SHVDN_VERSION="0.0.0.0";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="">WIN32;WIN32_LEAN_AND_MEAN;NOSOUND;NOMINMAX;NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='NativeGen|x64'">stdcpp17</LanguageStandard>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='NativeGen|x64'">Async</ExceptionHandling>
+    </ClCompile>
+    <CsCompile>
+      <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+      <Utf8Output>true</Utf8Output>
+    </CsCompile>
+    <Link>
+      <AdditionalLibraryDirectories>sdk\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ScriptHookRDR2.lib;MinHook-$(Configuration).lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- Specific compilation settings -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;WIN32_LEAN_AND_MEAN;NOSOUND;NOMINMAX;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <CsCompile>
+      <Optimize>false</Optimize>
+      <NoWarn>1591;1668;%(NoWarn)</NoWarn>
+      <WarningLevel>3</WarningLevel>
+    </CsCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;WIN32_LEAN_AND_MEAN;NOSOUND;NOMINMAX;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <CsCompile>
+      <Optimize>true</Optimize>
+      <NoWarn>1591;1668;%(NoWarn)</NoWarn>
+      <WarningLevel>3</WarningLevel>
+    </CsCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\ProjectSchema.xml" />
+  </ItemGroup>
+  <!-- Assembly references and source files -->
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\core\DllMain.cpp" />
+    <ClCompile Include="source\core\Function.cpp" />
+    <ClCompile Include="source\core\Input.cpp" />
+    <ClCompile Include="source\core\InputArgument.cpp" />
+    <ClCompile Include="source\core\Log.cpp" />
+    <ClCompile Include="source\core\Math\Matrix.cpp" />
+    <ClCompile Include="source\core\Math\Quaternion.cpp" />
+    <ClCompile Include="source\core\Math\Vector2.cpp" />
+    <ClCompile Include="source\core\Math\Vector3.cpp" />
+    <ClCompile Include="source\core\NativeObjects.cpp" />
+    <ClCompile Include="source\core\OutputArgument.cpp" />
+    <ClCompile Include="source\core\Script.cpp" />
+    <ClCompile Include="source\core\ScriptDomain.cpp" />
+    <ClCompile Include="source\core\Tasks\NativeTask.cpp" />
+    <ClCompile Include="source\core\UnmanagedLog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\core\Config.h" />
+    <ClInclude Include="source\core\DllMain.h" />
+    <ClInclude Include="source\core\Function.h" />
+    <ClInclude Include="source\core\INativeValue.h" />
+    <ClInclude Include="source\core\Input.h" />
+    <ClInclude Include="source\core\InputArgument.h" />
+    <ClInclude Include="source\core\IScriptTask.h" />
+    <ClInclude Include="source\core\Log.h" />
+    <ClInclude Include="source\core\ManagedGlobals.h" />
+    <ClInclude Include="source\core\Math\Matrix.hpp" />
+    <ClInclude Include="source\core\Math\Quaternion.hpp" />
+    <ClInclude Include="source\core\Math\Vector2.hpp" />
+    <ClInclude Include="source\core\Math\Vector3.hpp" />
+    <ClInclude Include="source\core\NativeHashes.h" />
+    <ClInclude Include="source\core\NativeObjects.h" />
+    <ClInclude Include="source\core\OutputArgument.h" />
+    <ClInclude Include="source\core\Script.h" />
+    <ClInclude Include="source\core\ScriptDomain.h" />
+    <ClInclude Include="source\core\stdafx.h" />
+    <ClInclude Include="source\core\Tasks\NativeTask.h" />
+    <ClInclude Include="source\core\UnmanagedLog.h" />
+    <ClInclude Include="source\core\utils\File.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <!-- Compile C# source files -->
+  <Target Name="CsCompile" BeforeTargets="ClCompile" Inputs="@(CsCompile)" Outputs="$(IntDir)$(TargetName).netmodule">
+    <Csc Sources="@(CsCompile)" AllowUnsafeBlocks="%(CsCompile.AllowUnsafeBlocks)" DisabledWarnings="%(CsCompile.NoWarn)" DocumentationFile="$(IntDir)$(TargetName).xdc" LangVersion="%(CsCompile.LangVersion)" Optimize="%(CsCompile.Optimize)" OutputAssembly="$(IntDir)$(TargetName).netmodule" TargetType="Module" Utf8Output="%(CsCompile.Utf8Output)" WarningLevel="%(CsCompile.WarningLevel)" WarningsAsErrors="%(CsCompile.WarningsAsErrors)" WarningsNotAsErrors="%(CsCompile.WarningsNotAsErrors)" ToolExe="$(CscToolExe)" ToolPath="$(CscToolPath)" />
+  </Target>
+  <!-- Verify SDK files exist before generating anything -->
+  <Target Name="VerifySDKFiles" BeforeTargets="BeforeBuildGenerateSources">
+    <ItemGroup>
+      <!-- Look for the header files and the library -->
+      <SDKFiles Include="sdk\inc\*.h" />
+      <SDKLib Include="sdk\lib\*.lib" />
+    </ItemGroup>
+    <PropertyGroup>
+      <!-- Make sure all necessary files are present -->
+      <SDKFilesMissing>false</SDKFilesMissing>
+      <SDKFilesMissing Condition="'@(SDKFiles)'=='' or '@(SDKLib)'==''">true</SDKFilesMissing>
+    </PropertyGroup>
+    <Error Text="ScriptHookRDR2 SDK files not found. Please copy the SDK files into the 'sdk' folder and try again." Condition="$(SDKFilesMissing)" />
+  </Target>
+</Project>

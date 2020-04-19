@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="core">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="core\Tasks">
+      <UniqueIdentifier>{17bdd362-6b4e-4f1d-8916-defa97b866c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\Math">
+      <UniqueIdentifier>{67b5e5ae-5c15-40d3-bd43-dae2bf9c754f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\Invoker">
+      <UniqueIdentifier>{4bcbf62e-71eb-436c-abed-f585aa462fba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\Memory">
+      <UniqueIdentifier>{6537ee9f-29b2-4916-aa36-94e36c06414e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\Function.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Main.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Script.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="core\OutputArgument.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\NativeObjects.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Input.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\InputArgument.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Tasks\NativeTask.cpp">
+      <Filter>core\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="core\GlobalVariable.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\UnmanagedLog.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ScriptDomain.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Log.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Math\Matrix.cpp">
+      <Filter>core\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Math\Quaternion.cpp">
+      <Filter>core\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Math\Vector2.cpp">
+      <Filter>core\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Math\Vector3.cpp">
+      <Filter>core\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="core\rdr2_main.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\Function.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\NativeHashes.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\INativeValue.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Script.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\OutputArgument.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\NativeObjects.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Input.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ManagedGlobals.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\InputArgument.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\IScriptTask.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Tasks\NativeTask.h">
+      <Filter>core\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Config.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\GlobalVariable.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\UnmanagedLog.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ScriptDomain.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Log.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Math\Matrix.hpp">
+      <Filter>core\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Math\Quaternion.hpp">
+      <Filter>core\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Math\Vector2.hpp">
+      <Filter>core\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Math\Vector3.hpp">
+      <Filter>core\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface.hpp" />
+    <ClInclude Include="core\Invoker\invoker.hpp">
+      <Filter>core\Invoker</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Invoker\natives.hpp">
+      <Filter>core\Invoker</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Invoker\hash_to_address_table.hpp">
+      <Filter>core\Invoker</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Memory\memory.hpp">
+      <Filter>core\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="core\rdr2_main.hpp">
+      <Filter>core</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

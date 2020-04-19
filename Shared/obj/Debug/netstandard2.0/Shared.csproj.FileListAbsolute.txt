@@ -1,0 +1,12 @@
+D:\RDRNetwork_Work\RDRNetwork\Shared\bin\Debug\netstandard2.0\Shared.deps.json
+D:\RDRNetwork_Work\RDRNetwork\Shared\bin\Debug\netstandard2.0\Shared.dll
+D:\RDRNetwork_Work\RDRNetwork\Shared\bin\Debug\netstandard2.0\Shared.pdb
+D:\RDRNetwork_Work\RDRNetwork\Shared\obj\Debug\netstandard2.0\Shared.AssemblyInfoInputs.cache
+D:\RDRNetwork_Work\RDRNetwork\Shared\obj\Debug\netstandard2.0\Shared.AssemblyInfo.cs
+D:\RDRNetwork_Work\RDRNetwork\Shared\obj\Debug\netstandard2.0\Shared.dll
+D:\RDRNetwork_Work\RDRNetwork\Shared\obj\Debug\netstandard2.0\Shared.pdb
+D:\RDRNetwork_Work\RDRNetwork\Client\bin\x64\Debug\netstandard2.0\Shared.deps.json
+D:\RDRNetwork_Work\RDRNetwork\Client\bin\x64\Debug\netstandard2.0\Shared.dll
+D:\RDRNetwork_Work\RDRNetwork\Client\bin\x64\Debug\netstandard2.0\Shared.pdb
+D:\RDRNetwork_Work\RDRNetwork\Shared\obj\Debug\netstandard2.0\Shared.csproj.CoreCompileInputs.cache
+D:\RDRNetwork_Work\RDRNetwork\Shared\obj\Debug\netstandard2.0\Shared.csprojAssemblyReference.cache

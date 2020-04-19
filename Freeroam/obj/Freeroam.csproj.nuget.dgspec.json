@@ -1,0 +1,169 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Repos\\RDRNetwork\\Freeroam\\Freeroam.csproj": {}
+  },
+  "projects": {
+    "D:\\Repos\\RDRNetwork\\Freeroam\\Freeroam.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repos\\RDRNetwork\\Freeroam\\Freeroam.csproj",
+        "projectName": "Freeroam",
+        "projectPath": "D:\\Repos\\RDRNetwork\\Freeroam\\Freeroam.csproj",
+        "packagesPath": "C:\\Users\\Flash\\.nuget\\packages\\",
+        "outputPath": "D:\\Repos\\RDRNetwork\\Freeroam\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Flash\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "D:\\Repos\\RDRNetwork\\ServerCore\\ServerCore.csproj": {
+                "projectPath": "D:\\Repos\\RDRNetwork\\ServerCore\\ServerCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Repos\\RDRNetwork\\Lidgren.Network\\Lidgren.Network.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repos\\RDRNetwork\\Lidgren.Network\\Lidgren.Network.csproj",
+        "projectName": "Lidgren.Network",
+        "projectPath": "D:\\Repos\\RDRNetwork\\Lidgren.Network\\Lidgren.Network.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "D:\\Repos\\RDRNetwork\\ServerCore\\ServerCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repos\\RDRNetwork\\ServerCore\\ServerCore.csproj",
+        "projectName": "ResuMPServerCore",
+        "projectPath": "D:\\Repos\\RDRNetwork\\ServerCore\\ServerCore.csproj",
+        "packagesPath": "C:\\Users\\Flash\\.nuget\\packages\\",
+        "outputPath": "D:\\Repos\\RDRNetwork\\ServerCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Flash\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "D:\\Repos\\RDRNetwork\\Lidgren.Network\\Lidgren.Network.csproj": {
+                "projectPath": "D:\\Repos\\RDRNetwork\\Lidgren.Network\\Lidgren.Network.csproj"
+              },
+              "D:\\Repos\\RDRNetwork\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\Repos\\RDRNetwork\\Shared\\Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Mono.Posix.NETStandard": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "System.CodeDom": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "protobuf-net": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Repos\\RDRNetwork\\Shared\\Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repos\\RDRNetwork\\Shared\\Shared.csproj",
+        "projectName": "Shared",
+        "projectPath": "D:\\Repos\\RDRNetwork\\Shared\\Shared.csproj"
+      },
+      "frameworks": {
+        "net46": {}
+      }
+    }
+  }
+}

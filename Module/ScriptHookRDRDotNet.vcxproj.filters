@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="source\core\DllMain.cpp" />
+    <ClCompile Include="source\core\Script.cpp" />
+    <ClCompile Include="source\core\UnmanagedLog.cpp" />
+    <ClCompile Include="source\core\ScriptDomain.cpp" />
+    <ClCompile Include="source\core\InputArgument.cpp" />
+    <ClCompile Include="source\core\NativeObjects.cpp" />
+    <ClCompile Include="source\core\OutputArgument.cpp" />
+    <ClCompile Include="source\core\Math\Vector2.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\Math\Vector3.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\Math\Matrix.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\Math\Quaternion.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\Tasks\NativeTask.cpp">
+      <Filter>Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\Log.cpp" />
+    <ClCompile Include="source\core\Function.cpp" />
+    <ClCompile Include="source\core\Input.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header">
+      <UniqueIdentifier>{1ad527ba-d7cc-4d83-b035-bee6da105375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{d24df326-7fa1-4768-a428-e9a9cde94797}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tasks">
+      <UniqueIdentifier>{876d8c0a-eb63-4025-a2c3-6d026cd49156}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\core\utils\File.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\stdafx.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\Script.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\Log.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\ManagedGlobals.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\Config.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\UnmanagedLog.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\ScriptDomain.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\Function.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\InputArgument.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\NativeHashes.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\INativeValue.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\NativeObjects.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\OutputArgument.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\Math\Quaternion.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\Math\Vector2.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\Math\Vector3.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\Math\Matrix.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\Tasks\NativeTask.h">
+      <Filter>Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\IScriptTask.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\Input.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\DllMain.h" />
+  </ItemGroup>
+</Project>

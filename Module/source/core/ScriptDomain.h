@@ -1,0 +1,34 @@
+#pragma once
+
+#include "Script.h"
+
+namespace RDR2
+{
+	public ref class ScriptDomain : public System::MarshalByRefObject
+	{
+	internal:
+		array<System::Type^>^ m_types = nullptr;
+		array<RDR2::Script^>^ m_scripts = nullptr;
+
+	public:
+		ScriptDomain();
+
+	public:
+		void FindAllTypes();
+
+		RDR2::Script^ GetExecuting();
+
+		bool ScriptInit(int scriptIndex, void* fiberMain, void* fiberScript);
+		bool ScriptExists(int scriptIndex);
+		int ScriptGetWaitTime(int scriptIndex);
+		void ScriptResetWaitTime(int scriptIndex);
+		void ScriptTick(int scriptIndex);
+
+		void QueueKeyboardEvent(System::Tuple<bool, System::Windows::Forms::Keys>^ ev);
+
+		void OnUnhandledException(System::Object^ sender, System::UnhandledExceptionEventArgs^ e);
+		System::Reflection::Assembly^ OnAssemblyResolve(System::Object^ sender, System::ResolveEventArgs^ args);
+
+		static System::String^ CurrentDir;
+	};
+}

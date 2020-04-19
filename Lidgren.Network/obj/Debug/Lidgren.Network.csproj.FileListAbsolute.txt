@@ -1,0 +1,11 @@
+D:\Repos\ResurrectionMP_V2\ResurrectionMP\Lidgren.Network\bin\Debug\Lidgren.Network.XML
+D:\Repos\ResurrectionMP_V2\ResurrectionMP\Lidgren.Network\bin\Debug\Lidgren.Network.dll
+D:\Repos\ResurrectionMP_V2\ResurrectionMP\Lidgren.Network\bin\Debug\Lidgren.Network.pdb
+D:\Repos\ResurrectionMP_V2\ResurrectionMP\Lidgren.Network\obj\Debug\Lidgren.Network.dll
+D:\Repos\ResurrectionMP_V2\ResurrectionMP\Lidgren.Network\obj\Debug\Lidgren.Network.pdb
+D:\Repos\RDRNetwork\Lidgren.Network\bin\Debug\Lidgren.Network.XML
+D:\Repos\RDRNetwork\Lidgren.Network\bin\Debug\Lidgren.Network.dll
+D:\Repos\RDRNetwork\Lidgren.Network\bin\Debug\Lidgren.Network.pdb
+D:\Repos\RDRNetwork\Lidgren.Network\obj\Debug\Lidgren.Network.csprojAssemblyReference.cache
+D:\Repos\RDRNetwork\Lidgren.Network\obj\Debug\Lidgren.Network.dll
+D:\Repos\RDRNetwork\Lidgren.Network\obj\Debug\Lidgren.Network.pdb

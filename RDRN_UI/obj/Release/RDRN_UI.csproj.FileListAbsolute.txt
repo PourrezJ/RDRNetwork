@@ -1,0 +1,10 @@
+D:\RDRNetwork_Work\RDRNetwork\RDRN_UI\bin\Release\RDRN_UI.pdb
+D:\RDRNetwork_Work\RDRNetwork\RDRN_UI\bin\Release\Xilium.CefGlue.dll
+D:\RDRNetwork_Work\RDRNetwork\RDRN_UI\bin\Release\Xilium.CefGlue.pdb
+D:\RDRNetwork_Work\RDRNetwork\RDRN_UI\bin\Release\Xilium.CefGlue.xml
+D:\RDRNetwork_Work\RDRNetwork\RDRN_UI\obj\Release\RDRN_UI.csproj.CoreCompileInputs.cache
+D:\RDRNetwork_Work\RDRNetwork\RDRN_UI\obj\Release\RDRN_UI.csproj.CopyComplete
+D:\RDRNetwork_Work\RDRNetwork\RDRN_UI\obj\Release\RDRN_UI.pdb
+D:\RDRNetwork_Work\RDRNetwork\RDRN_UI\bin\Release\RDRN_UI.exe
+D:\RDRNetwork_Work\RDRNetwork\RDRN_UI\obj\Release\RDRN_UI.exe
+D:\RDRNetwork_Work\RDRNetwork\RDRN_UI\obj\Release\RDRN_UI.csprojAssemblyReference.cache
